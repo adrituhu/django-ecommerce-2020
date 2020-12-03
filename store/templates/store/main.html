@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 
     <script type="text/javascript">
+        var user = '{{request.user}}'
         function getCookie(name) {
         let cookieValue = null;
         if (document.cookie && document.cookie !== '') {
@@ -48,7 +49,7 @@
                   <a href="{% url 'cart' %}">
                       <img id="cart-icon" src="{% static 'image/cart.png' %}">
                   </a>
-                  <p id="cart-total">0</p>
+                  <p id="cart-total">{{cartItems}}</p>
               </div>
           </div>
         </nav>
